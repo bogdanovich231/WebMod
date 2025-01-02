@@ -1,0 +1,19 @@
+.inputForm input {
+  border-radius: 20px;
+  border: none;
+  font-size: 23px;
+  font-weight: 300;
+  padding: 21px 0px 21px 23px;
+  width: 100%;
+  background-color: #3a363c;
+}
+.inputForm input::placeholder {
+  color: var(--text);
+}
+.inputForm input:focus-visible {
+  outline: none;
+}
+.errorMessage {
+  font-size: 15px;
+  color: red;
+}

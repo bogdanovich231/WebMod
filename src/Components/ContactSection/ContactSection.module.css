@@ -1,0 +1,14 @@
+.containerContact {
+  margin: 0 auto;
+  max-width: 1440px;
+  margin-top: 141px;
+}
+.containerContact h2 {
+  text-transform: uppercase;
+}
+.containerContact p {
+  margin-top: 17px;
+}
+.softText {
+  color: var(--textSoft);
+}
