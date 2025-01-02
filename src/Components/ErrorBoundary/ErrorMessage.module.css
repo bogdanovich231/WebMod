@@ -1,0 +1,13 @@
+.messageBoundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.messageBoundary h1 {
+  color: var(--textSoft);
+  font-size: 17rem;
+}
+.messageBoundary p {
+  color: var(--text);
+}
