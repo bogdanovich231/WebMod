@@ -3,3 +3,102 @@
   gap: 33px;
   align-items: center;
 }
+.menuCheckbox {
+  display: none;
+}
+.active {
+  color: var(--textSoft);
+}
+@media screen and (max-width: 1050px) {
+  .menuCheckbox {
+    display: block;
+  }
+  .containerMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 40px;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition:
+      transform 1.3s ease,
+      opacity 1.3s ease;
+    z-index: 1000;
+  }
+
+  .containerMenu.showMenu {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .containerMenu ul {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .containerMenu ul li {
+    margin: 20px 0;
+  }
+
+  .containerMenu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+
+  .containerMenu ul li a:hover {
+    color: var(--textSoft);
+  }
+
+  .menuCheckbox {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    position: absolute;
+    top: 45px;
+    right: 35px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  .hamburgerMenu div {
+    height: 4px;
+    background-color: #ee00ff;
+    margin-bottom: 6px;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+  .hamburgerMenu div:nth-child(1) {
+    width: 22px;
+  }
+  .hamburgerMenu div:nth-child(2) {
+    width: 17px;
+  }
+  .hamburgerMenu div:nth-child(3) {
+    width: 30px;
+  }
+  .hamburgerMenu div:last-child {
+    margin-bottom: 0;
+  }
+
+  .menuCheckbox:checked + .hamburgerMenu div:nth-child(1),
+  .menuCheckbox:checked + .hamburgerMenu div:nth-child(2),
+  .menuCheckbox:checked + .hamburgerMenu div:nth-child(3) {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transform: rotate(-50%) translate(-90deg);
+    background-color: #ffff;
+  }
+}
