@@ -1,4 +1,5 @@
 import About from '../../Components/About/About';
+import ProjectsSection from '../../Components/ProjectsSection/ProjectsSection';
 import WelcomeBlock from '../../Components/WelcomeSection/WelcomeSection';
 
 function MainLayout() {
@@ -6,6 +7,7 @@ function MainLayout() {
     <>
       <WelcomeBlock />
       <About />
+      <ProjectsSection />
     </>
   );
 }

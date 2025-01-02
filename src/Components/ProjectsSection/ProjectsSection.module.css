@@ -1,0 +1,34 @@
+.containerProjects {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 141px;
+}
+
+.containerProjects h2 {
+  text-transform: uppercase;
+}
+.containerProjects p {
+  margin-top: 17px;
+}
+.softText {
+  color: var(--textSoft);
+}
+@media screen and (max-width: 1440px) {
+  .containerProjects {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .containerProjects {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .containerProjects {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

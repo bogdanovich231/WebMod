@@ -1,0 +1,21 @@
+.containerCard {
+  width: 400px;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.cardButton {
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1440px) {
+  .containerCard {
+    width: 355px;
+    height: 450px;
+  }
+}
