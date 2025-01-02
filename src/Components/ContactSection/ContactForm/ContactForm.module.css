@@ -1,5 +1,5 @@
 .containerForm {
-  margin-top: 45px;
+  margin-top: 100px;
 }
 .wrapperForm {
   display: flex;
@@ -55,4 +55,15 @@
 .errorMessage {
   font-size: 15px;
   color: red;
+}
+@media screen and (max-width: 1050px) {
+  .wrapperForm {
+    display: block;
+  }
+  .rightSideForm {
+    margin-top: 58px;
+  }
+  .inputForm input {
+    width: 97.5%;
+  }
 }

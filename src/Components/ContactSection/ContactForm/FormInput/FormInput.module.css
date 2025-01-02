@@ -17,3 +17,23 @@
   font-size: 15px;
   color: red;
 }
+@media screen and (max-width: 1050px) {
+  .inputForm input {
+    width: 97.5%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .inputForm input {
+    width: 96.5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .inputForm input {
+    width: 94.5%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .inputForm input {
+    width: 93.5%;
+  }
+}

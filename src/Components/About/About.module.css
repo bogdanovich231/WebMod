@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 66px;
-  margin-top: 65px;
+  margin-top: 100px;
 }
 .about h2 {
   text-transform: uppercase;
@@ -41,7 +41,7 @@
   .containerAbout {
     flex-direction: column-reverse;
   }
-  .containerAbout img{
+  .containerAbout img {
     max-width: 100%;
   }
 }

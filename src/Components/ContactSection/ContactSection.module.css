@@ -12,3 +12,23 @@
 .softText {
   color: var(--textSoft);
 }
+
+@media screen and (max-width: 1440px) {
+  .containerContact {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .containerContact {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .containerContact {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
