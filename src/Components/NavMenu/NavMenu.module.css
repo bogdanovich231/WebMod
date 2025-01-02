@@ -1,0 +1,5 @@
+.containerMenu ul {
+  display: flex;
+  gap: 33px;
+  align-items: center;
+}

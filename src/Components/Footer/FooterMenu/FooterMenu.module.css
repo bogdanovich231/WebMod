@@ -1,0 +1,11 @@
+.footerMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+@media screen and (max-width: 1050px) {
+  .footerMenu {
+    align-items: center;
+  }
+}

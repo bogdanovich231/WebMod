@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoTitle {
+  display: flex;
+  flex-direction: column;
+}
+.logoTitle p {
+  font-size: 16px;
+  color: var(--textExtra);
+}
