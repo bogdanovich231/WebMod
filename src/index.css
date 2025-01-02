@@ -65,10 +65,6 @@ button {
   margin: 0;
 }
 
-.soft_text {
-  color: var(--textSoft);
-}
-
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--textSoft) var(--bg);

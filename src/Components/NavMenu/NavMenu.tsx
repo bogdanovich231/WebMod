@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import styles from './NavMenu.module.css';
-import { useState } from 'react';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { toggleMenu, closeMenu } from '../../store/slices/menu.slice';
 import { useDispatch, useSelector } from 'react-redux';

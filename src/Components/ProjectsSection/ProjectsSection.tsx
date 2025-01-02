@@ -8,7 +8,7 @@ import 'swiper/swiper-bundle.css';
 import { Autoplay, Pagination } from 'swiper/modules';
 import './SwiperProjects.css';
 
-function ProjectsSection() {
+function ProjectsSection({ id }) {
   const { data, isLoading } = useGetProjectsQuery({});
 
   if (isLoading) return <Loader />;
@@ -18,7 +18,7 @@ function ProjectsSection() {
   }
 
   return (
-    <div className={styles.containerProjects}>
+    <div id={id} className={styles.containerProjects}>
       <h2>
         My <b className={styles.softText}>successful</b> projects
       </h2>

@@ -5,7 +5,7 @@ import { useGetAboutQuery } from '../../store/api/api';
 import { extractContent } from '../../utils/ExtractContent/ExtractContent';
 import Loader from '../Loader/Loader';
 
-function About() {
+function About({ id }) {
   const { data, isLoading } = useGetAboutQuery({});
 
   const contentData = Array.isArray(data) ? data[0] : data;
@@ -17,7 +17,7 @@ function About() {
   const { heading, headingH3, imgSrc } = extractContent(contentData.content.rendered);
 
   return (
-    <div className={styles.about}>
+    <div id={id} className={styles.about}>
       {heading && <h2 dangerouslySetInnerHTML={{ __html: heading }} />}
       <div className={styles.containerAbout}>
         <img src={imgSrc} alt="Web studio" />

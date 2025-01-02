@@ -1,9 +1,9 @@
 import ContactForm from './ContactForm/ContactForm';
 import styles from './ContactSection.module.css';
 
-function ContactSection() {
+function ContactSection({ id }) {
   return (
-    <div className={styles.containerContact}>
+    <div id={id} className={styles.containerContact}>
       <h2>
         Let’s <b className={styles.softText}>collaborate</b>
       </h2>

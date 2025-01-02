@@ -9,6 +9,9 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<MainLayout />} />
+        <Route path="/about" element={<MainLayout scrollTo="about" />} />
+        <Route path="/projects" element={<MainLayout scrollTo="projects" />} />
+        <Route path="/collaboration" element={<MainLayout scrollTo="collaboration" />} />
       </Routes>
       <Footer />
     </Router>
