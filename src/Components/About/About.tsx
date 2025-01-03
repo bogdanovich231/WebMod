@@ -22,7 +22,7 @@ function About({ id }) {
       <div className={styles.containerAbout}>
         <img src={imgSrc} alt="Web studio" />
         <div className={styles.aboutTitle}>
-          {headingH3 && <h3 dangerouslySetInnerHTML={{ __html: headingH3 }} />}
+          {headingH3 && <p dangerouslySetInnerHTML={{ __html: headingH3 }} />}
           <div className={styles.wrapperLinks}>
             <LinkedinLink />
             <TelegramLink />

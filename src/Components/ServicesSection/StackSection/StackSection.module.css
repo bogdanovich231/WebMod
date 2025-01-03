@@ -1,0 +1,26 @@
+.itemStack {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3a363c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.itemStack img {
+  max-width: 75px;
+  transform: rotate(315deg);
+}
+.containerStacks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  margin-right: 80px;
+  position: relative;
+  top: -65px;
+}

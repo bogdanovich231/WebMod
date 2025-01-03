@@ -1,0 +1,65 @@
+.services {
+  display: flex;
+  height: 70vh;
+  overflow: hidden;
+}
+.containerServices {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 141px;
+}
+.containerServices h2 {
+  margin-bottom: 55px;
+  text-transform: uppercase;
+}
+.softText {
+  color: var(--textSoft);
+}
+.wrapperContent {
+  flex: 1;
+  overflow-y: scroll;
+  height: 50vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.progressBar {
+  width: 2px;
+  background-color: #3a363c;
+  position: absolute;
+  left: 11%;
+  right: 0;
+  height: 52%;
+}
+
+.progress {
+  width: 100%;
+  background-color: #ee00ff;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contentInformation {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  transition: color 0.3s;
+}
+.contentInformation p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+.contentInformation.inactive {
+  color: #474648;
+}
+
+.contentInformation.active {
+  color: white;
+}

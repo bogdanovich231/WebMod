@@ -14,8 +14,8 @@
   text-transform: uppercase;
 }
 .aboutTitle p {
-  font-size: 16px;
-  color: var(--textExtra);
+  font-size: 23px;
+  color: var(--text);
   margin: 0;
 }
 
