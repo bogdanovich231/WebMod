@@ -24,3 +24,31 @@
   position: relative;
   top: -65px;
 }
+@media screen and (max-width: 1190px) {
+  .containerStacks {
+    margin-right: 0px;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 790px) {
+  .itemStack {
+    width: 65px;
+    height: 65px;
+  }
+  .itemStack img {
+    max-width: 45px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .itemStack {
+    width: 75px;
+    height: 75px;
+  }
+  .itemStack img {
+    max-width: 55px;
+    transform: rotate(0deg);
+  }
+  .containerStacks {
+    transform: rotate(0deg);
+  }
+}

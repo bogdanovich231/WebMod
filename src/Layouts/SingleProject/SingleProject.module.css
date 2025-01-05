@@ -60,3 +60,16 @@
     font-size: 20px;
   }
 }
+@media screen and (max-width: 500px) {
+  .projectStack ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 20px;
+  }
+  .projectStack ul li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0px;
+  }
+}

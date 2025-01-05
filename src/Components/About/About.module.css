@@ -40,6 +40,7 @@
 @media screen and (max-width: 1050px) {
   .containerAbout {
     flex-direction: column-reverse;
+    margin-top: 17px;
   }
   .containerAbout img {
     max-width: 100%;

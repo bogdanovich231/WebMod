@@ -18,7 +18,7 @@
 .wrapperContent {
   flex: 1;
   overflow-y: scroll;
-  height: 50vh;
+  height: 48vh;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -26,10 +26,11 @@
 .progressBar {
   width: 2px;
   background-color: #3a363c;
-  position: absolute;
-  left: 11%;
+  position: relative;
+  left: 0px;
   right: 0;
-  height: 52%;
+  height: 71%;
+  margin-top: 15px;
 }
 
 .progress {
@@ -41,6 +42,7 @@
   display: flex;
   flex-direction: column;
   height: 70vh;
+  margin-left: 15px;
 }
 
 .contentInformation {
@@ -62,4 +64,33 @@
 
 .contentInformation.active {
   color: white;
+}
+.wrapperServices {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1440px) {
+  .containerServices {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .containerServices {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .wrapperServices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  .containerServices {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
