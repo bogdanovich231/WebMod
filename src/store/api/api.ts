@@ -12,12 +12,14 @@ export const api = createApi({
     getProjects: builder.query({
       query: () => 'projects_post',
     }),
-
+    getProjectInformation: builder.query({
+      query: ({slug}) => `projects_post?slug=${slug}`,
+    }),
   }),
 });
 
 export const {
   useGetAboutQuery,
   useGetProjectsQuery,
-
+  useGetProjectInformationQuery
 } = api;

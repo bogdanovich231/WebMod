@@ -47,6 +47,7 @@ function ProjectsSection({ id }) {
       >
         {data.map((item: any, index: number) => {
           const { imgSrc } = extractContent(item.content.rendered);
+          const slug = item.slug;
           const buttonColor = index % 2 === 0 ? '#050306' : '#B308C0';
 
           return (
@@ -57,7 +58,7 @@ function ProjectsSection({ id }) {
                 justifyContent: 'center',
               }}
             >
-              <CardProject backgroundImage={imgSrc} buttonColor={buttonColor} />
+              <CardProject backgroundImage={imgSrc} buttonColor={buttonColor} slug={slug} />
             </SwiperSlide>
           );
         })}
