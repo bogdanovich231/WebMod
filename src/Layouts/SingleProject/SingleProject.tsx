@@ -32,9 +32,9 @@ function SingleProject() {
             ))}
           </ul>
         </div>
-        <div className={styles.projectImage}>
-          <img src={imgSrc2} alt="Project WebModTech" />
-        </div>
+      </div>
+      <div className={styles.projectImage}>
+        <img src={imgSrc2} alt="Project WebModTech" />
       </div>
     </div>
   );
