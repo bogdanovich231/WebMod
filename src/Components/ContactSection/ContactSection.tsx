@@ -1,7 +1,8 @@
+import { Id } from '../../utils/Intefrace/SlugInterface';
 import ContactForm from './ContactForm/ContactForm';
 import styles from './ContactSection.module.css';
 
-function ContactSection({ id }) {
+function ContactSection({ id }: Id) {
   return (
     <div id={id} className={styles.containerContact}>
       <h2>

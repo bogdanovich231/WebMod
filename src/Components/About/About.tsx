@@ -4,8 +4,9 @@ import TelegramLink from '../MediaLinks/TelegramLink';
 import { useGetAboutQuery } from '../../store/api/api';
 import { extractContent } from '../../utils/ExtractContent/ExtractContent';
 import Loader from '../Loader/Loader';
+import { Id } from '../../utils/Intefrace/SlugInterface';
 
-function About({ id }) {
+function About({ id }: Id) {
   const { data, isLoading } = useGetAboutQuery({});
 
   const contentData = Array.isArray(data) ? data[0] : data;

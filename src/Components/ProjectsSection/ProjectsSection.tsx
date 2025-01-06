@@ -7,8 +7,9 @@ import { Swiper as SwiperComponent, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { Autoplay, Pagination } from 'swiper/modules';
 import './SwiperProjects.css';
+import { Id } from '../../utils/Intefrace/SlugInterface';
 
-function ProjectsSection({ id }) {
+function ProjectsSection({ id }: Id) {
   const { data, isLoading } = useGetProjectsQuery({});
 
   if (isLoading) return <Loader />;
