@@ -37,3 +37,8 @@
     width: 93.5%;
   }
 }
+@media screen and (max-width: 450px) {
+  .inputForm input {
+    font-size: 19px;
+  }
+}

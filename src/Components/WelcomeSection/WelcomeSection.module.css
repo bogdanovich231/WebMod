@@ -1,8 +1,8 @@
 .welcome {
-  height: 100vh;
+  height: 101vh;
   width: 100vw;
   background: image-set(url('../../assets/stars/back.png') 1x);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
@@ -40,11 +40,35 @@
   width: 100%;
   height: 100%;
   z-index: 0;
-  pointer-events: none; /* Созвездия не блокируют мышь */
+  pointer-events: none;
 }
 
 .star {
   position: absolute;
-  width: 220px; /* Увеличим размер */
-  pointer-events: auto; /* Чтобы курсор мог взаимодействовать */
+  width: 220px;
+  pointer-events: auto;
+}
+@media screen and (max-width: 900px) {
+  .welcome {
+    background-size: auto;
+  }
+  .containerWelcome p,
+  .containerWelcome h1 {
+    max-width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .welcome {
+    background-size: 222%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .welcome {
+    background: none;
+  }
+  .containerWelcome {
+    text-align: left;
+  }
 }

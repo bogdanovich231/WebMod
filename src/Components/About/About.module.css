@@ -13,11 +13,6 @@
 .about h2 {
   text-transform: uppercase;
 }
-.aboutTitle p {
-  font-size: 23px;
-  color: var(--text);
-  margin: 0;
-}
 
 .wrapperLinks {
   display: flex;

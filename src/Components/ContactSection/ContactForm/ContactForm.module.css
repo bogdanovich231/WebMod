@@ -67,3 +67,11 @@
     width: 97.5%;
   }
 }
+@media screen and (max-width: 450px) {
+  .fieldTextarea textarea {
+    font-size: 19px;
+  }
+  .submitButton {
+    font-size: 21px;
+  }
+}
