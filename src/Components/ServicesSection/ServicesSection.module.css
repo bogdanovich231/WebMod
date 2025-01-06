@@ -7,6 +7,15 @@
   max-width: 1440px;
   margin: 0 auto;
   margin-top: 141px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+}
+.containerServices.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .containerServices h2 {
   margin-bottom: 55px;

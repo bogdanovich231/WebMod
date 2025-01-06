@@ -2,6 +2,15 @@
   margin: 0 auto;
   max-width: 1440px;
   margin-top: 141px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+}
+.containerContact.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .containerContact h2 {
   text-transform: uppercase;

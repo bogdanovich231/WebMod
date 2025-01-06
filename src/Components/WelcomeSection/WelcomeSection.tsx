@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './WelcomeSection.module.css';
 import { motion } from 'framer-motion';
 import IConStar1 from '../../assets/stars/star1.svg';
@@ -6,6 +6,7 @@ import IConStar2 from '../../assets/stars/star2.svg';
 import IConStar3 from '../../assets/stars/star3.svg';
 import IConStar4 from '../../assets/stars/star4.svg';
 import IConStar5 from '../../assets/stars/star5.svg';
+import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
 
 const CONSTELLATIONS = [
   { id: 1, src: IConStar1, x: 1600, y: 400 },
@@ -17,6 +18,13 @@ const CONSTELLATIONS = [
 
 function WelcomeBlock() {
   const [mousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const cleanupObserver = useIntersectionObserver(styles.welcome, styles.visible);
+    return () => {
+      cleanupObserver();
+    };
+  }, []);
 
   return (
     <div className={styles.welcome}>

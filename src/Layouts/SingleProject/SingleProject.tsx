@@ -4,10 +4,20 @@ import { extractContent, extractStackList } from '../../utils/ExtractContent/Ext
 import styles from './SingleProject.module.css';
 import { useParams } from 'react-router-dom';
 import CustomButton from '../../Components/CustomButton/CustomButton';
+import { useEffect } from 'react';
+import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
 
 function SingleProject() {
   const { slug } = useParams();
   const { data, isLoading } = useGetProjectInformationQuery({ slug });
+
+  useEffect(() => {
+    const cleanupObserver = useIntersectionObserver(styles.containerProject, styles.visible);
+    return () => {
+      cleanupObserver();
+    };
+  }, [data]);
+
   const contentData = Array.isArray(data) ? data[0] : data;
 
   if (!contentData || !contentData.content || !contentData.content.rendered) {

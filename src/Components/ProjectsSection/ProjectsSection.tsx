@@ -8,9 +8,18 @@ import 'swiper/swiper-bundle.css';
 import { Autoplay, Pagination } from 'swiper/modules';
 import './SwiperProjects.css';
 import { Id } from '../../utils/Intefrace/SlugInterface';
+import { useEffect } from 'react';
+import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
 
 function ProjectsSection({ id }: Id) {
   const { data, isLoading } = useGetProjectsQuery({});
+
+  useEffect(() => {
+    const cleanupObserver = useIntersectionObserver(styles.containerProjects, styles.visible);
+    return () => {
+      cleanupObserver();
+    };
+  }, [data]);
 
   if (isLoading) return <Loader />;
 

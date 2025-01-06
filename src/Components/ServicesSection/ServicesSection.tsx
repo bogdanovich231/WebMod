@@ -2,11 +2,19 @@ import styles from './ServicesSection.module.css';
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import StackSection from './StackSection/StackSection';
+import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
 
 function ServicesSection() {
   const contentRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const cleanupObserver = useIntersectionObserver(styles.containerServices, styles.visible);
+    return () => {
+      cleanupObserver();
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {

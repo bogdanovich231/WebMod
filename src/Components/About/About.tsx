@@ -5,9 +5,18 @@ import { useGetAboutQuery } from '../../store/api/api';
 import { extractContent } from '../../utils/ExtractContent/ExtractContent';
 import Loader from '../Loader/Loader';
 import { Id } from '../../utils/Intefrace/SlugInterface';
+import { useEffect } from 'react';
+import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
 
 function About({ id }: Id) {
   const { data, isLoading } = useGetAboutQuery({});
+
+  useEffect(() => {
+    const cleanupObserver = useIntersectionObserver(styles.about, styles.visible);
+    return () => {
+      cleanupObserver();
+    };
+  }, [data]);
 
   const contentData = Array.isArray(data) ? data[0] : data;
 
