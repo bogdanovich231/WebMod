@@ -9,10 +9,11 @@ export const extractContent = (htmlContent: string) => {
   const imgAlt = tempDiv.querySelector('img')?.getAttribute('alt') || 'image';
   const images = tempDiv.querySelectorAll('img');
   const imgSrc2 = images[1]?.getAttribute('src') || '';
+  const projectLink = tempDiv.querySelector('h3 a')?.getAttribute('href') || '';
   const instagramLink = tempDiv.querySelector('h4 a[href*="instagram.com"]')?.getAttribute('href') || '';
   const telegramLink = tempDiv.querySelector('h4 a[href*="t.me"]')?.getAttribute('href') || '';
 
-  return { heading, headingH3, paragraph, imgSrc, imgAlt, imgSrc2,  instagramLink, telegramLink };
+  return { heading, headingH3, projectLink, paragraph, imgSrc, imgAlt, imgSrc2,  instagramLink, telegramLink };
   };
   
   export function extractStackList(htmlContent: string) {

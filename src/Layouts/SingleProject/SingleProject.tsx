@@ -3,6 +3,7 @@ import Loader from '../../Components/Loader/Loader';
 import { extractContent, extractStackList } from '../../utils/ExtractContent/ExtractContent';
 import styles from './SingleProject.module.css';
 import { useParams } from 'react-router-dom';
+import CustomButton from '../../Components/CustomButton/CustomButton';
 
 function SingleProject() {
   const { slug } = useParams();
@@ -14,7 +15,7 @@ function SingleProject() {
   }
   if (isLoading) return <Loader />;
 
-  const { heading, paragraph, imgSrc2 } = extractContent(contentData.content.rendered);
+  const { heading, projectLink, paragraph, imgSrc2 } = extractContent(contentData.content.rendered);
 
   const stackList = extractStackList(contentData.content.rendered);
 
@@ -35,6 +36,9 @@ function SingleProject() {
       </div>
       <div className={styles.projectImage}>
         <img src={imgSrc2} alt="Project WebModTech" />
+      </div>
+      <div className={styles.containerButton}>
+        <CustomButton text="Zobacz Project" background="#B308C0" link={projectLink} />
       </div>
     </div>
   );

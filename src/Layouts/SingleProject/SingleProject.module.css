@@ -28,6 +28,10 @@
 .projectImage img {
   width: 100%;
 }
+.containerButton {
+  text-align: center;
+  margin-top: 25px;
+}
 @media screen and (max-width: 1440px) {
   .projectContent {
     margin-left: 65px;
