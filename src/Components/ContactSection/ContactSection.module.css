@@ -1,6 +1,4 @@
 .containerContact {
-  margin: 0 auto;
-  max-width: 1440px;
   margin-top: 141px;
   opacity: 0;
   transform: translateY(20px);
@@ -11,6 +9,11 @@
 .containerContact.visible {
   opacity: 1;
   transform: translateY(0);
+}
+.containerContact h2,
+.containerContact p {
+  margin: 0 auto;
+  max-width: 1440px;
 }
 .containerContact h2 {
   text-transform: uppercase;
@@ -23,20 +26,23 @@
 }
 
 @media screen and (max-width: 1440px) {
-  .containerContact {
+  .containerContact h2,
+  .containerContact p {
     margin-left: 65px;
     margin-right: 65px;
   }
 }
 @media screen and (max-width: 1240px) {
-  .containerContact {
+  .containerContact h2,
+  .containerContact p {
     margin-left: 35px;
     margin-right: 35px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .containerContact {
+  .containerContact h2,
+  .containerContact p {
     margin-left: 15px;
     margin-right: 15px;
   }

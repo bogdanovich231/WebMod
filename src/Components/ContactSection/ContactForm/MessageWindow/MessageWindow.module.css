@@ -1,0 +1,75 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(0deg 0% 0% / 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+.modalOverlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modalWindow {
+  max-width: 850px;
+  background-color: #3a363c;
+  border-radius: 10px;
+  padding-top: 47px;
+  padding-bottom: 36px;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+.modalOverlay.active .modalWindow {
+  transform: translateY(0);
+  opacity: 1;
+}
+.modalWindowContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 56px;
+  margin-right: 56px;
+}
+.modalWindowContent p {
+  text-align: center;
+  margin-bottom: 25px !important;
+}
+.modalWindowContent h3 {
+  text-align: center;
+  font-weight: bold;
+}
+.modalWindowContent img {
+  margin-bottom: 32px;
+  width: 115px;
+}
+
+@media screen and (max-width: 1440px) {
+  .modalWindow {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .modalWindow {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .modalWindowContent {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
