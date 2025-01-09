@@ -6,11 +6,12 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../store/store';
 import FormInput from './FormInput/FormInput';
-import { setEmail, setMessage, setName, setPhone } from '../../../store/slices/form.slice';
+import { resetForm, setEmail, setLoader, setMessage, setName, setPhone } from '../../../store/slices/form.slice';
+import Loader from '../../Loader/Loader';
 
 function ContactForm() {
   const dispatch = useDispatch();
-  const { name, email, phone, message } = useSelector((state: RootState) => state.form);
+  const { name, email, phone, message, isLoading } = useSelector((state: RootState) => state.form);
 
   const {
     register,
@@ -18,9 +19,32 @@ function ContactForm() {
     formState: { errors },
   } = useForm<IFormInput>({ resolver: yupResolver(schema) });
 
-  const onSubmit = (data: IFormInput) => {
-    console.log(data);
+  const onSubmit = async (data: IFormInput) => {
+    const payload = {
+      ...data,
+    };
+
+    try {
+      const response = await fetch('https://webmodtech.com/wordpress/wp-json/connect/v1/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        dispatch(resetForm());
+      } else {
+        console.error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+    } finally {
+      dispatch(setLoader(false));
+    }
   };
+
   return (
     <div className={styles.containerForm}>
       <form onSubmit={handleSubmit(onSubmit)}>
@@ -56,13 +80,13 @@ function ContactForm() {
                 {...register('message')}
                 onChange={(e) => dispatch(setMessage(e.target.value))}
               />
-              {errors.message ? <p className={styles.errorMessage}>{errors.message.message}</p> : null}
+              {errors.message ? <p className={styles.errorMessage}>{errors.message?.message}</p> : null}
             </div>
           </div>
         </div>
         <div className={styles.wrapperSubmitButton}>
-          <button type="submit" className={styles.submitButton}>
-            Send Message
+          <button type="submit" className={styles.submitButton} disabled={isLoading}>
+            {isLoading ? <Loader /> : 'Send Message'}
           </button>
         </div>
       </form>
