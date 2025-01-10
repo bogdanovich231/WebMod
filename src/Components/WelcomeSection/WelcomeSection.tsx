@@ -7,7 +7,6 @@ import IConStar3 from '../../assets/stars/star3.svg';
 import IConStar4 from '../../assets/stars/star4.svg';
 import IConStar5 from '../../assets/stars/star5.svg';
 import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
-import ScrollToTop from '../ScrollToTop/ScrollToTop';
 
 const CONSTELLATIONS = [
   { id: 1, src: IConStar1, x: 1600, y: 400 },
@@ -29,7 +28,6 @@ function WelcomeBlock() {
 
   return (
     <div className={styles.welcome}>
-      <ScrollToTop />
       <div className={styles.containerWelcome}>
         <p>Utilizing current technologies to deliver innovative and engaging web solutions.</p>
         <h1>Creating web applications using modern technology</h1>

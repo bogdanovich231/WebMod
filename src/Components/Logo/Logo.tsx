@@ -7,10 +7,13 @@ interface ILogo {
   align?: 'center';
 }
 function Logo({ direction, align }: ILogo) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <Link to={'/'} className={styles.logo} style={{ flexDirection: direction }}>
       <img src={iconLogo} alt="WebModTech" />
-      <div className={styles.logoTitle} style={{ alignItems: align }}>
+      <div className={styles.logoTitle} onClick={scrollToTop} style={{ alignItems: align }}>
         <h4>Tatsiana Kulinkovich</h4>
         <p>Software engineer</p>
       </div>

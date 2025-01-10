@@ -6,13 +6,14 @@ import TelegramLink from '../MediaLinks/TelegramLink';
 import FooterMenu from './FooterMenu/FooterMenu';
 
 function Footer() {
+
   return (
     <div className={styles.footer}>
       <div className={styles.containerFooter}>
         <div className={styles.wrapperFooterMenu}>
           <FooterMenu />
         </div>
-        <div className={styles.wrapperFooterLogo}>
+        <div  className={styles.wrapperFooterLogo}>
           <Logo direction="column" align="center" />
         </div>
         <div className={styles.footerContact}>
