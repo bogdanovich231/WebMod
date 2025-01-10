@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import CustomButton from '../../Components/CustomButton/CustomButton';
 import { useEffect } from 'react';
 import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
+import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 
 function SingleProject() {
   const { slug } = useParams();
@@ -31,6 +32,7 @@ function SingleProject() {
 
   return (
     <div className={styles.containerProject}>
+      <ScrollToTop />
       <div className={styles.projectContent}>
         <div className={styles.projectDescription}>
           <h2>{heading}</h2>
@@ -48,7 +50,7 @@ function SingleProject() {
         <img src={imgSrc2} alt="Project WebModTech" />
       </div>
       <div className={styles.containerButton}>
-        <CustomButton text="Zobacz Project" background="#B308C0" link={projectLink} />
+        <CustomButton text="View Project" background="#B308C0" link={projectLink} />
       </div>
     </div>
   );

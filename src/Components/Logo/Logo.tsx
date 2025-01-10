@@ -1,15 +1,20 @@
+import { Link } from 'react-router-dom';
 import iconLogo from '../../assets/logo.svg';
 import styles from './Logo.module.css';
 
-function Logo() {
+interface ILogo {
+  direction?: 'row' | 'column';
+  align?: 'center';
+}
+function Logo({ direction, align }: ILogo) {
   return (
-    <div className={styles.logo}>
+    <Link to={'/'} className={styles.logo} style={{ flexDirection: direction }}>
       <img src={iconLogo} alt="WebModTech" />
-      <div className={styles.logoTitle}>
+      <div className={styles.logoTitle} style={{ alignItems: align }}>
         <h4>Tatsiana Kulinkovich</h4>
         <p>Software engineer</p>
       </div>
-    </div>
+    </Link>
   );
 }
 

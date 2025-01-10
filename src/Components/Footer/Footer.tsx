@@ -9,11 +9,15 @@ function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.containerFooter}>
-        <FooterMenu />
-        <Logo />
+        <div className={styles.wrapperFooterMenu}>
+          <FooterMenu />
+        </div>
+        <div className={styles.wrapperFooterLogo}>
+          <Logo direction="column" align="center" />
+        </div>
         <div className={styles.footerContact}>
           <h4 className={styles.contactTitle}>Contacts:</h4>
-          <Link to={'info@studio.com'}>
+          <Link to={'info@webmodtech.com'}>
             <h4>info@webmodtech.com</h4>
           </Link>
           <div className={styles.footerLinks}>
