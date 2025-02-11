@@ -6,8 +6,9 @@ export const formSlice = createSlice({
   initialState: {
     name: '',
     email: '',
-    phone:'',
+    phone: '',
     message: '',
+    acceptTerms: false,
     isLoading: false,
   },
   reducers: {
@@ -18,17 +19,20 @@ export const formSlice = createSlice({
       state.email = action.payload;
     },
     setPhone: (state, action: PayloadAction<string>) => {
-        state.phone = action.payload;
-      },
+      state.phone = action.payload;
+    },
     setMessage: (state, action: PayloadAction<string>) => {
       state.message = action.payload;
     },
-
+    setAcceptTerms: (state, action: PayloadAction<boolean>) => {
+      state.acceptTerms = action.payload;
+    },
     resetForm: (state) => {
       state.name = '';
       state.email = '';
       state.phone = '';
       state.message = '';
+      state.acceptTerms = false;
     },
     setLoader: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload;
@@ -36,7 +40,7 @@ export const formSlice = createSlice({
   },
 });
 
-export const { setName, setEmail, setPhone, setMessage, resetForm, setLoader } = formSlice.actions;
+export const { setName, setEmail, setPhone, setMessage, setAcceptTerms, resetForm, setLoader } = formSlice.actions;
 
 export const selectForm = (state: RootState) => state.form;
 

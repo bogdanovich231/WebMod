@@ -3,5 +3,5 @@ export interface IFormInput {
   phone: string;
   email: string;
   message: string;
-  // acceptTerms: any
+  acceptTerms: boolean;
 }

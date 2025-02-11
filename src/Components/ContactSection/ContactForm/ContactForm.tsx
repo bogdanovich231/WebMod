@@ -11,6 +11,7 @@ import Loader from '../../Loader/Loader';
 import MessageWindow from './MessageWindow/MessageWindow';
 import { closeContactModal, openContactModal } from '../../../store/slices/modal.slice';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function ContactForm() {
   const dispatch = useDispatch();
@@ -101,6 +102,15 @@ function ContactForm() {
                 {errors.message ? <p className={styles.errorMessage}>{errors.message?.message}</p> : null}
               </div>
             </div>
+          </div>
+          <div className={styles.checkboxField}>
+            <div className={styles.checkboxFieldContainer}>
+              <label className={styles.checkboxLabel}>
+                <input type="checkbox" {...register('acceptTerms', { required: true })} />I agree to the
+                <Link to={'/cookies-policy'}> Cookies Policy</Link>.
+              </label>
+            </div>
+            {errors.acceptTerms && <p className={styles.errorMessage}>{errors.acceptTerms?.message}</p>}
           </div>
           <div className={styles.wrapperSubmitButton}>
             <button type="submit" className={styles.submitButton} disabled={isLoading}>
