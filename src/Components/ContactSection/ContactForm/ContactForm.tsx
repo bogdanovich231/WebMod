@@ -22,8 +22,8 @@ function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
+    clearErrors,
   } = useForm<IFormInput>({ resolver: yupResolver(schema) });
-
   const onSubmit = async (data: IFormInput) => {
     const payload = {
       ...data,
@@ -73,21 +73,30 @@ function ContactForm() {
                 placeholder="Your Name *"
                 value={name}
                 register={register('name')}
-                onChange={(e) => dispatch(setName(e.target.value))}
+                onChange={(e) => {
+                  dispatch(setName(e.target.value));
+                  clearErrors('name');
+                }}
                 error={errors.name?.message}
               />
               <FormInput
                 placeholder="Your Email *"
                 value={email}
                 register={register('email')}
-                onChange={(e) => dispatch(setEmail(e.target.value))}
+                onChange={(e) => {
+                  dispatch(setEmail(e.target.value));
+                  clearErrors('email');
+                }}
                 error={errors.email?.message}
               />
               <FormInput
                 placeholder="Your Phone *"
                 value={phone}
                 register={register('phone')}
-                onChange={(e) => dispatch(setPhone(e.target.value))}
+                onChange={(e) => {
+                  dispatch(setPhone(e.target.value));
+                  clearErrors('phone');
+                }}
                 error={errors.phone?.message}
               />
             </div>
@@ -97,7 +106,10 @@ function ContactForm() {
                   placeholder="Tell me about your project, ideas..."
                   value={message}
                   {...register('message')}
-                  onChange={(e) => dispatch(setMessage(e.target.value))}
+                  onChange={(e) => {
+                    dispatch(setMessage(e.target.value));
+                    clearErrors('message');
+                  }}
                 />
                 {errors.message ? <p className={styles.errorMessage}>{errors.message?.message}</p> : null}
               </div>
