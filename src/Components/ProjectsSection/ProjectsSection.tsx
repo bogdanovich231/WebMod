@@ -33,8 +33,8 @@ function ProjectsSection({ id }: Id) {
         My <b className={styles.softText}>successful</b> projects
       </h2>
       <p>
-        Discover recent projects showcasing our skills and creativity. I take pride in each one, striving to ensure my
-        work helps clients achieve their goals in the digital space.
+        Discover my recent projects that showcase my skills and creativity. I take pride in each one, striving to ensure
+        my work helps clients achieve their goals in the digital space.{' '}
       </p>
       <SwiperComponent
         slidesPerView={1}

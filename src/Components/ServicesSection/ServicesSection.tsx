@@ -4,6 +4,25 @@ import { motion } from 'framer-motion';
 import StackSection from './StackSection/StackSection';
 import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
 
+const services = [
+  {
+    title: 'Landing Page Development',
+    description: 'Stunning single-page websites designed to maximize conversions.',
+  },
+  {
+    title: 'Multi-Page Websites',
+    description: 'Structured and functional websites for complex projects.',
+  },
+  {
+    title: 'Telegram Bot Creation',
+    description: 'Interactive and useful bots for your business.',
+  },
+  {
+    title: 'WordPress Integration with REST API',
+    description: 'Leveraging WordPress as a flexible platform for building modern web applications.',
+  },
+];
+
 function ServicesSection() {
   const contentRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,7 +70,7 @@ function ServicesSection() {
           </div>
           <div className={styles.wrapperContent} ref={contentRef}>
             <motion.div className={styles.content}>
-              {[...Array(4)].map((_, index) => (
+              {services.map((service, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
@@ -59,8 +78,8 @@ function ServicesSection() {
                   transition={{ duration: 1, ease: 'easeIn' }}
                   className={`${styles.contentInformation} ${activeIndex === index ? styles.active : styles.inactive}`}
                 >
-                  <h3>Landing Page Development</h3>
-                  <p>Stunning single-page websites designed to maximize conversions.</p>
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
                 </motion.div>
               ))}
             </motion.div>

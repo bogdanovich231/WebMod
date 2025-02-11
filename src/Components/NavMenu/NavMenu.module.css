@@ -3,12 +3,15 @@
   gap: 33px;
   align-items: center;
 }
+
 .menuCheckbox {
   display: none;
 }
+
 .active {
   color: var(--textSoft);
 }
+
 @media screen and (max-width: 1050px) {
   .menuCheckbox {
     display: block;
@@ -60,7 +63,7 @@
   }
 
   .menuCheckbox {
-    display: none;
+    display: contents;
   }
 
   .hamburgerMenu {
@@ -70,7 +73,7 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 2100;
   }
   .hamburgerMenu div {
     height: 4px;

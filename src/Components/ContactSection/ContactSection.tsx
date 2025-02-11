@@ -18,8 +18,7 @@ function ContactSection({ id }: Id) {
         Let’s <b className={styles.softText}>collaborate</b>
       </h2>
       <p>
-        Fill out the form, send us an email, or give us a call. Tell us about your project, and we’ll be happy to
-        discuss your ideas and needs.
+        Fill out the form and share your project with me. I’ll gladly discuss your ideas and help bring them to life.
       </p>
       <ContactForm />
     </div>

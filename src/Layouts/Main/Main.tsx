@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useEffect } from 'react';
 import About from '../../Components/About/About';
 import ContactSection from '../../Components/ContactSection/ContactSection';
