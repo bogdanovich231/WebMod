@@ -1,0 +1,75 @@
+.containerCookies {
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-top: 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 1.5s ease-out,
+    transform 1.5s ease-out;
+}
+.containerCookies.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.titleCookies {
+  margin-bottom: 35px;
+}
+.containerCookies h2 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.softText {
+  color: var(--textSoft);
+}
+.mainListCookies li {
+  list-style-type: decimal;
+  margin-bottom: 25px;
+}
+.mainListCookies li h3 {
+  margin-bottom: 15px;
+}
+.mainListCookies li h4 {
+  margin-top: 15px;
+}
+.subListCookies li {
+  list-style-type: disc;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.mainListCookies li::marker {
+  font-size: 25px;
+  font-weight: 700;
+}
+.subListCookies li::marker {
+  color: var(--textSoft);
+}
+.extraTitle {
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 1440px) {
+  .containerCookies {
+    margin-left: 65px;
+    margin-right: 65px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .containerCookies {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .containerCookies {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .mainListCookies li::marker {
+    font-size: 21px;
+    font-weight: 700;
+  }
+  .subListCookies li {
+    margin-left: 0px;
+  }
+}
