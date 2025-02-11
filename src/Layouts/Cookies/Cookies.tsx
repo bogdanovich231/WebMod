@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import styles from './Cookies.module.css';
 import { useIntersectionObserver } from '../../utils/UseIntersectionObserver/UseIntersectionObserver';
+import ScrollToTop from '../../Components/ScrollToTop/ScrollToTop';
 
 function Cookies() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function Cookies() {
 
   return (
     <div className={styles.containerCookies}>
+      <ScrollToTop />
       <div className={styles.titleCookies}>
         <h2>
           <b className={styles.softText}>Cookies</b> Policy
